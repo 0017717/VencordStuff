@@ -1,0 +1,19 @@
+/*Shake animation hover to the text area when you don't have permission !*/
+
+/* Define the shake animation */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-10px); }
+  40%, 80% { transform: translateX(10px); }
+}
+
+/* Initial state of the element */
+[class*=channelTextAreaDisabled] {
+  position: relative;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+/* Hover state to trigger the shake animation */
+[class*=channelTextAreaDisabled]:hover {
+  animation: shake 0.5s ease-in-out;
+}
